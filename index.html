@@ -317,17 +317,146 @@
     <div class="container">
       <div class="features-layout">
 
-        <div class="features-mockup reveal">
-          <div class="mockup-screen">
-            <div class="mockup-dot"></div>
-            <p class="mockup-logo-text">DTRoll</p>
-            <div class="mockup-bars">
-              <div class="mockup-bar"></div>
-              <div class="mockup-bar"></div>
-              <div class="mockup-bar"></div>
-            </div>
-          </div>
-          <span class="features-label">LED Display</span>
+        <div class="features-mockup reveal" aria-label="DTRoll i mässmiljö">
+          <svg viewBox="0 0 420 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" aria-hidden="true">
+            <defs>
+              <linearGradient id="sceneScreenG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0c1e2e"/>
+                <stop offset="60%" stop-color="#0a1828"/>
+                <stop offset="100%" stop-color="#060e18"/>
+              </linearGradient>
+              <linearGradient id="sceneFloorG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0b1420"/>
+                <stop offset="100%" stop-color="#050810"/>
+              </linearGradient>
+              <linearGradient id="scenePersonG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#141d2b"/>
+                <stop offset="100%" stop-color="#0c1420"/>
+              </linearGradient>
+              <filter id="sceneGlow">
+                <feGaussianBlur stdDeviation="5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="sceneSoftGlow">
+                <feGaussianBlur stdDeviation="12" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Background: exhibition hall -->
+            <rect width="420" height="500" fill="#060810" rx="10"/>
+            <!-- Back wall -->
+            <rect x="0" y="0" width="420" height="340" fill="#070A10"/>
+            <!-- Floor -->
+            <rect x="0" y="340" width="420" height="160" fill="url(#sceneFloorG)"/>
+            <line x1="0" y1="340" x2="420" y2="340" stroke="#14E2C4" stroke-width="0.4" opacity="0.12"/>
+            <!-- Perspective floor grid -->
+            <line x1="0" y1="380" x2="420" y2="380" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="0" y1="420" x2="420" y2="420" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="0" y1="460" x2="420" y2="460" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="210" y1="340" x2="210" y2="500" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="140" y1="340" x2="50" y2="500" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="280" y1="340" x2="370" y2="500" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="70" y1="340" x2="-60" y2="500" stroke="#0d1620" stroke-width="0.5"/>
+            <line x1="350" y1="340" x2="480" y2="500" stroke="#0d1620" stroke-width="0.5"/>
+            <!-- Booth side walls -->
+            <rect x="0" y="50" width="55" height="295" fill="#07090E" stroke="#0c1520" stroke-width="0.5"/>
+            <rect x="365" y="50" width="55" height="295" fill="#07090E" stroke="#0c1520" stroke-width="0.5"/>
+            <!-- Booth branding lines (subtle) -->
+            <rect x="10" y="140" width="35" height="5" rx="2" fill="#0d1825"/>
+            <rect x="10" y="151" width="25" height="4" rx="2" fill="#0d1825"/>
+            <rect x="375" y="140" width="35" height="5" rx="2" fill="#0d1825"/>
+            <rect x="375" y="151" width="25" height="4" rx="2" fill="#0d1825"/>
+            <!-- Ceiling strip -->
+            <rect x="55" y="46" width="310" height="4" rx="2" fill="#14E2C4" opacity="0.05"/>
+
+            <!-- ── DTRoll product ── -->
+            <!-- Screen glow on floor -->
+            <ellipse cx="210" cy="345" rx="52" ry="7" fill="#14E2C4" opacity="0.06" filter="url(#sceneSoftGlow)"/>
+            <!-- Stand base -->
+            <ellipse cx="210" cy="340" rx="42" ry="6.5" fill="#0A0D15"/>
+            <rect x="178" y="335" width="64" height="9" rx="4.5" fill="#0e1523"/>
+            <!-- Wheels -->
+            <circle cx="187" cy="342" r="4.5" fill="#08090F" stroke="#14E2C4" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="233" cy="342" r="4.5" fill="#08090F" stroke="#14E2C4" stroke-width="0.8" opacity="0.4"/>
+            <!-- Pole -->
+            <rect x="205" y="298" width="10" height="44" rx="4" fill="#0d1422"/>
+            <!-- Outer frame -->
+            <rect x="160" y="52" width="100" height="252" rx="7" fill="#0F1820" stroke="#192430" stroke-width="1.5"/>
+            <!-- LED screen surface -->
+            <rect x="168" y="60" width="84" height="236" rx="5" fill="url(#sceneScreenG)"/>
+
+            <!-- ── Screen content ── -->
+            <!-- Header bar -->
+            <rect x="168" y="60" width="84" height="32" rx="5" fill="#091424"/>
+            <rect x="178" y="72" width="30" height="7" rx="2" fill="#14E2C4" opacity="0.8"/>
+            <rect x="213" y="72" width="18" height="7" rx="2" fill="rgba(255,255,255,0.12)"/>
+            <!-- Hero image area -->
+            <rect x="168" y="92" width="84" height="96" fill="#081320"/>
+            <circle cx="210" cy="136" r="35" fill="#0d2235" opacity="0.7"/>
+            <line x1="168" y1="92" x2="200" y2="124" stroke="#14E2C4" stroke-width="0.5" opacity="0.12"/>
+            <!-- DTRoll icon on screen -->
+            <rect x="197" y="124" width="26" height="18" rx="2" fill="#0f2535" stroke="#14E2C4" stroke-width="0.8" opacity="0.6"/>
+            <rect x="200" y="127" width="20" height="12" rx="1" fill="#14E2C4" opacity="0.12"/>
+            <line x1="210" y1="142" x2="210" y2="148" stroke="#14E2C4" stroke-width="1" opacity="0.4"/>
+            <rect x="204" y="146" width="12" height="3" rx="1" fill="#14E2C4" opacity="0.3"/>
+            <rect x="197" y="124" width="26" height="18" rx="2" fill="none" stroke="#14E2C4" stroke-width="0.5" opacity="0.2" filter="url(#sceneGlow)"/>
+            <!-- Content text lines -->
+            <rect x="178" y="200" width="64" height="8" rx="2" fill="rgba(255,255,255,0.12)"/>
+            <rect x="178" y="214" width="48" height="5" rx="2" fill="rgba(255,255,255,0.06)"/>
+            <rect x="178" y="225" width="56" height="5" rx="2" fill="rgba(255,255,255,0.06)"/>
+            <rect x="178" y="237" width="40" height="5" rx="2" fill="rgba(255,255,255,0.05)"/>
+            <!-- CTA button on screen -->
+            <rect x="178" y="256" width="52" height="19" rx="9.5" fill="#14E2C4" opacity="0.9"/>
+            <rect x="185" y="262" width="38" height="7" rx="2" fill="rgba(0,0,0,0.3)"/>
+            <!-- Screen edge glow -->
+            <rect x="168" y="60" width="84" height="236" rx="5" fill="none" stroke="#14E2C4" stroke-width="0.7" opacity="0.2" filter="url(#sceneGlow)"/>
+
+            <!-- ── Person 1: left, holding phone toward screen ── -->
+            <rect x="76" y="310" width="12" height="32" rx="5" fill="url(#scenePersonG)"/>
+            <rect x="93" y="310" width="12" height="32" rx="5" fill="url(#scenePersonG)"/>
+            <rect x="72" y="248" width="37" height="66" rx="12" fill="url(#scenePersonG)"/>
+            <circle cx="90" cy="233" r="15" fill="#121b28"/>
+            <path d="M109 270 Q138 262 160 258" stroke="#121b28" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <!-- Phone -->
+            <rect x="152" y="252" width="9" height="14" rx="2" fill="#14E2C4" opacity="0.6"/>
+            <rect x="154" y="254" width="5" height="8" rx="1" fill="rgba(255,255,255,0.15)"/>
+
+            <!-- ── Person 2: right, observing ── -->
+            <rect x="302" y="316" width="10" height="28" rx="4" fill="url(#scenePersonG)" opacity="0.75"/>
+            <rect x="316" y="316" width="10" height="28" rx="4" fill="url(#scenePersonG)" opacity="0.75"/>
+            <rect x="299" y="264" width="30" height="56" rx="10" fill="url(#scenePersonG)" opacity="0.8"/>
+            <circle cx="314" cy="251" r="13" fill="#121b28" opacity="0.85"/>
+            <path d="M299 284 Q314 278 329 284" stroke="#121b28" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.75"/>
+
+            <!-- ── Callout annotations ── -->
+            <!-- Top right: 600–1000 nits -->
+            <path d="M252 72 L282 62" stroke="#14E2C4" stroke-width="0.7" stroke-dasharray="3 2" opacity="0.4"/>
+            <circle cx="282" cy="62" r="2.5" fill="#14E2C4" opacity="0.6"/>
+            <rect x="282" y="46" width="88" height="30" rx="4" fill="#07101A" stroke="rgba(20,226,196,0.15)" stroke-width="1"/>
+            <text x="326" y="58" fill="#14E2C4" font-size="7.5" font-family="Inter,sans-serif" text-anchor="middle" font-weight="600">600–1000 nits</text>
+            <text x="326" y="69" fill="#6A7A8A" font-size="6.5" font-family="Inter,sans-serif" text-anchor="middle">Syns i fullt dagsljus</text>
+            <!-- Middle right: P1.9 -->
+            <path d="M252 172 L282 172" stroke="#14E2C4" stroke-width="0.7" stroke-dasharray="3 2" opacity="0.4"/>
+            <circle cx="282" cy="172" r="2.5" fill="#14E2C4" opacity="0.6"/>
+            <rect x="282" y="156" width="88" height="30" rx="4" fill="#07101A" stroke="rgba(20,226,196,0.15)" stroke-width="1"/>
+            <text x="326" y="168" fill="#14E2C4" font-size="7.5" font-family="Inter,sans-serif" text-anchor="middle" font-weight="600">P1.9 pixeltäthet</text>
+            <text x="326" y="179" fill="#6A7A8A" font-size="6.5" font-family="Inter,sans-serif" text-anchor="middle">Skarp HD-bild</text>
+            <!-- Left: update via mobile -->
+            <path d="M160 258 L136 245" stroke="#14E2C4" stroke-width="0.7" stroke-dasharray="3 2" opacity="0.4"/>
+            <circle cx="136" cy="245" r="2.5" fill="#14E2C4" opacity="0.6"/>
+            <rect x="44" y="228" width="90" height="30" rx="4" fill="#07101A" stroke="rgba(20,226,196,0.15)" stroke-width="1"/>
+            <text x="89" y="240" fill="#14E2C4" font-size="7.5" font-family="Inter,sans-serif" text-anchor="middle" font-weight="600">Uppdatera innehåll</text>
+            <text x="89" y="251" fill="#6A7A8A" font-size="6.5" font-family="Inter,sans-serif" text-anchor="middle">Via mobil, USB eller webb</text>
+            <!-- Bottom: Plug and Play -->
+            <path d="M210 308 L210 354" stroke="#14E2C4" stroke-width="0.7" stroke-dasharray="3 2" opacity="0.4"/>
+            <circle cx="210" cy="354" r="2.5" fill="#14E2C4" opacity="0.6"/>
+            <rect x="152" y="356" width="116" height="30" rx="4" fill="#07101A" stroke="rgba(20,226,196,0.15)" stroke-width="1"/>
+            <text x="210" y="368" fill="#14E2C4" font-size="7.5" font-family="Inter,sans-serif" text-anchor="middle" font-weight="600">Plug &amp; Play</text>
+            <text x="210" y="379" fill="#6A7A8A" font-size="6.5" font-family="Inter,sans-serif" text-anchor="middle">Rullbar hjulbas · Redo på 5 sek</text>
+            <!-- Scene label -->
+            <text x="210" y="462" fill="#1E2A38" font-size="8" font-family="Inter,sans-serif" text-anchor="middle" letter-spacing="2">MÄSSA · BUTIK · RECEPTION</text>
+          </svg>
         </div>
 
         <div class="features-text reveal reveal-delay-1">
