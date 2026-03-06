@@ -1,0 +1,10 @@
+# Netlify / OS
+.netlify/
+.DS_Store
+Thumbs.db
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Stora videofiler 
+# assets/video/dtroll-hero.mp4 # Avkommentera om videon är för stor för git (gräns brukar gå vid ~100MB)
